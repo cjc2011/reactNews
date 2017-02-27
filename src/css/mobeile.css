@@ -1,0 +1,35 @@
+html{
+  font-size: 50px;
+}
+#mobeile_header{
+  flex: 1;
+  background: #f6f6f6;
+
+}
+#mobeile_header header{
+  padding-left: 10px;
+  border-bottom: 1px solid #2db7f5;
+}
+#mobeile_header header img{
+  height: 50px;
+}
+#mobeile_header header span{
+  font-size: 35px;
+  line-height: 45px;
+  vertical-align: top;
+  padding-left: 15px;
+  color: #2db7f5;
+}
+
+#mobeile_header i{
+  float: right;
+  font-size: 0.5rem;
+  margin-right: 0.3rem;
+  margin-top: 0.3rem;
+  color: #2db7f5;
+}
+
+
+.mobeile_footer{
+  text-align: center;
+}
