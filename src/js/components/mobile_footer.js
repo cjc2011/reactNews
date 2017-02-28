@@ -3,7 +3,7 @@ var React = require('react');
 
 import { Row, Col } from 'antd';
 
-export default class mobeileFooter extends React.Component{
+export default class mobileFooter extends React.Component{
   render(){
     return(
         <footer>

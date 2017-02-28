@@ -1,35 +1,165 @@
-.logo{
-  align-items: center;
-  display: flex;
+.logo {
+    align-items: center;
+    display: flex;
 }
-.logo img{
-  width: 48px;
-  height: 48px;
+
+.logo img {
+    width: 48px;
+    height: 48px;
 }
-.logo span{
-  font-size: 24px;
-  padding-left: 5px;
+
+.logo span {
+    font-size: 24px;
+    padding-left: 5px;
 }
-.register{
-  float: right !important;
+
+.register {
+    float: right !important;
 }
+
 .register a {
-  display: inline-block !important;
-  margin-right: 10px;
+    display: inline-block !important;
+    margin-right: 10px;
 }
 
-.container{
-  padding-top: 10px;
-}
-.leftContainer{
-  width: 400px;
-  float: left;
-}
-.carousel{
-  width: 400px;
-  float: left;
+.container {
+    padding-top: 10px;
 }
 
-.footer{
-  text-align: center;
+.leftContainer {
+    width: 400px;
+    float: left;
+}
+
+.carousel {
+    margin: 15px 0 20px 0;
+    width: 400px;
+    float: left;
+}
+
+.carousel img {
+    width: 400px;
+    height: 260px;
+}
+
+.topNewsList {
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.topNewsList a {
+    line-height: 22px !important;
+    color: #666 !important;
+}
+
+.tabs_news {
+    margin-left: 10px;
+    width: 460px;
+    float: left;
+}
+
+.tabs_product {
+    width: 300px;
+    padding-left: 10px;
+    float: left;
+}
+
+.tabs_news li {
+    height: 27px;
+    line-height: 27px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 417px;
+    float: left;
+    text-overflow: ellipsis;
+}
+
+.tabs_product li {
+    height: 27px;
+    line-height: 27px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 257px;
+    text-overflow: ellipsis;
+}
+
+.clearfix {
+    margin-top: 20px;
+}
+
+.ant-tabs-bar {
+    margin-bottom: 0 !important;
+}
+
+.ant-card-body {
+    padding: 15px !important;
+}
+
+.leftContainer {
+    width: 400px;
+    float: left;
+}
+
+.articleContainer{
+  margin-top: 10px;
+  min-height: 1000px;
+}
+ #title{
+   margin-bottom: 10px;
+ }
+ #content img{
+   width: 600px;
+   margin-bottom: 20px;
+ }
+ #content .img-wrap{
+   padding-bottom: 10px !important;
+ }
+ #content p{
+   font-size: 13px;
+   line-height: 24px;
+   margin-bottom: 10px;
+   padding-right: 50px;
+ }
+/*image block******START*****/
+
+.imageblock {
+    float: left;
+}
+
+.custom-card {
+    padding: 5px;
+}
+
+.custom-card p {
+    color: #999;
+}
+
+.register {
+    float: right !important;
+}
+
+.ant-card {
+    margin-top: 5px !important;
+}
+
+.ant-card-head-title {
+    text-align: left !important;
+}
+
+.ant-card-body {
+    text-align: left !important;
+}
+
+.usercenter {
+    float: right !important;
+}
+
+
+
+.footer {
+    text-align: center;
 }

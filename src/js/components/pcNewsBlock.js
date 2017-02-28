@@ -16,8 +16,7 @@ export default class pcNewsBlock extends React.Component{
     var myFeatchOptions = {
       methods:'GET'
     };
-    fetch('http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type='+this.props.type
-    +'&count='+this.props.count)
+    fetch('http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type='+this.props.type+'&count='+this.props.count)
     .then(response=>response.json())
     .then(json=>{
         this.setState({news:json});
@@ -37,7 +36,6 @@ export default class pcNewsBlock extends React.Component{
     ))
     :
     '暂时没有数据';
-    console.log(newList)
     return(
       <div className="topNewsList">
         <Card>

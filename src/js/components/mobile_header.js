@@ -16,7 +16,7 @@ import {
 } from 'antd';
 const FormItem = Form.Item;
 const TabPane = Tabs.TabPane;
-class mobeileHeader extends React.Component{
+class mobileHeader extends React.Component{
   constructor() {
     super();
     this.state = {
@@ -183,4 +183,4 @@ class mobeileHeader extends React.Component{
   }
 }
 
-export default  mobeileHeader = Form.create({})(mobeileHeader);
+export default  mobileHeader = Form.create({})(mobileHeader);
