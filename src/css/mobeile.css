@@ -54,7 +54,9 @@ html {
     font-size: 0.36rem;
 }
 
-
+.comment .ant-card-head-title{
+  font-size: 13px;
+}
 
 .ucmobileList #J_article img{
   width: 100%;

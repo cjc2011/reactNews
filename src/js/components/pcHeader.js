@@ -13,6 +13,7 @@ import {
   Input,
   CheckBox,
   Button,
+  notification,
   Modal
 } from 'antd';
 const FormItem = Form.Item;
@@ -58,6 +59,15 @@ const TabPane = Tabs.TabPane;
     };
     //获取表单内的数据
     var formData = this.props.form.getFieldsValue();
+    if(this.state.action == 'login'){
+      if(!formData.userName || !formData.passWord){
+        return notification['error']({message: '登录失败', description: '帐号或密码错误'});
+      }
+    }else{
+      if(!formData.r_userName || !formData.r_passWord || !formData.r_confirmenPassWord){
+        return notification['error']({message: '注册失败', description: '请正确输入'});
+      }
+    }
     fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
     + "&username="+formData.userName
     +"&password="+formData.r_password
@@ -92,6 +102,7 @@ const TabPane = Tabs.TabPane;
       }
     });
   };
+  //退出登录事件
   loginOut(){
     this.setState({hasLogined:false});
     localStorage.userName='';
@@ -117,7 +128,7 @@ const TabPane = Tabs.TabPane;
     <Menu.Item key="login" className="register">
       <Button type="primary"  htmlType="button">{this.state.userName}</Button>
       &nbsp;&nbsp;
-      <Link target="_blank" to="#/">
+      <Link target="_blank" to={'/usercenter'}>
         <Button type="dashed" htmlType="button">个人中心</Button>
       </Link>
       <Button htmlType="button" onClick={this.loginOut.bind(this)}>退出</Button>

@@ -22,11 +22,14 @@ const TabPane = Tabs.TabPane;
 class CommonComments extends React.Component{
   constructor() {
     super();
+    // P.S: 仅能在构造函数中设置 state
+    // 在其他地方绝不能使用 this.state.XXX = XXX
+    // 只能使用 this.setState({ XXX: XXX })
     this.state = {
       comments:''
     }
   };
-
+  //获取用户评论列表
   componentWillMount() {
     var myFeatchOptions = {
       methods:'GET'
@@ -45,10 +48,10 @@ class CommonComments extends React.Component{
     };
     var formdata = this.props.form.getFieldsValue();
     if(!localStorage.userId){
-      return alert('请登录');
+      return notification['error']({message: '错误', description: '请登录'});
     }
     if(!formdata.remark){
-      return alert('请输入内容');
+      return notification['error']({message: '错误', description: '请输入内容'});
     }
     fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=" + localStorage.userId + "&uniquekey=" + this.props.uniquekey + "&commnet=" + formdata.remark, myFetchOptions).then(response => response.json()).then(json => {
       this.props.form.setFields({
@@ -64,6 +67,10 @@ class CommonComments extends React.Component{
 		var myFetchOptions = {
 			method: 'GET'
 		};
+    if(!localStorage.userId){
+      notification['error']({message: '收藏失败', description: '请登录'});
+      return;
+    }
 		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userId + "&uniquekey=" + this.props.uniquekey, myFetchOptions).then(response => response.json()).then(json => {
 			//收藏成功以后进行一下全局的提醒
 			notification['success']({message: 'ReactNews提醒', description: '收藏此文章成功'});
