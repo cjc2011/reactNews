@@ -3,6 +3,8 @@
 
 >项目中运用的技术为 react+react-router+fetch+ant_design;
 
+>测试用帐号 999  密码 123
+
 
 ### 二、项目运行
 ```bash
@@ -11,8 +13,5 @@ npm install
 
 # 2. 启动项目
 webpack-dev-server --contentbase --inline --hot
-
-# 3. 打包项目
-npm run build
 
 ```
